@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - AnimeID</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css"> <!-- Custom CSS -->
+
+    <style>
+        /* Custom CSS */
+        .login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-form {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">AnimeID</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trending</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Genre
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Shounen</a>
+                <a class="dropdown-item" href="#">Action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Romance</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      
+    <div class="login-container" id="loginContainer">
+        <div class="login-form">
+            <div class="header">
+                <h2 id="form-title" class="animation a1">Welcome to AnimeID</h2>
+                <h4 id="form-subtitle" class="animation a2">Log in to your account AnimeID</h4>
+            </div>
+            <section id="sign-in" class="form">
+                <input type="email" class="form-control form-field animation a3" placeholder="Email">
+                <input type="password" class="form-control form-field animation a4" placeholder="Password">
+                <div class="form-group form-check animation a5">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember Me</label>
+                </div>
+                <p class="animation a6"><a href="#" onclick="showForgotPassword()">Forgot Password</a></p>
+                <button type="button" class="btn btn-primary animation a7" onclick="SubmitLogin()">LOGIN</button>
+                <p class="animation a8">Belum memiliki akun? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+            </section>
+            
+
+            <section id="sign-up" class="form hidden">
+                <input type="text" class="form-control form-field animation a3" placeholder="Username">
+                <input type="email" class="form-control form-field animation a4" placeholder="Email">
+                <input type="password" class="form-control form-field animation a5" placeholder="Password">
+                <div class="form-group form-field animation a6">
+                    <label class="mr-3">
+                        <input type="radio" name="gender" value="male"> Male
+                    </label>
+                    <label class="mr-3">
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                </div>
+                <button type="button" class="btn btn-primary animation a7" onclick="SubmitSignUp()">SIGN UP</button>
+                <p class="animation a8">Sudah memiliki akun? <a href="#" onclick="showSignIn()">Sign In</a></p>
+            </section>
+
+            <section id="forgot-password" class="form hidden">
+                <input type="email" class="form-control form-field animation a3" placeholder="Email">
+                <button type="button" class="btn btn-primary animation a4" onclick="ResetPassword()">RESET PASSWORD</button>
+                <p class="animation a5"><a href="#" onclick="showSignIn()">Back to Sign In</a></p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="./script/main.js"></script>
+
+</body>
+</html>
